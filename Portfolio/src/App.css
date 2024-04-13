@@ -1,0 +1,7 @@
+
+.gradiant-text {
+  -webkit-background-clip: text;
+  @apply bg-gradient-to-t from-white to-red-900 text-transparent;
+  
+}
+
