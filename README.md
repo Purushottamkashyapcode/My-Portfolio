@@ -19,7 +19,9 @@ You can find the complete source code for this project on GitHub:
 
 Since this project is hosted locally, you can view the website by running it on your machine (see [Installation](#installation) for instructions). Below are some screenshots to give you a preview of the website:
 
-*(Add screenshots of your website here)*
+![Image](https://github.com/user-attachments/assets/ca88c2b8-6ace-4850-852e-e31600be3203)
+![Image](https://github.com/user-attachments/assets/8db80f3d-1553-42bf-8c68-12b943c9b506)
+![Image](https://github.com/user-attachments/assets/b3922c2a-8285-4a9a-b96d-9c6751ea8f4b)
 
 ## Technologies Used
 
