@@ -6,20 +6,28 @@ import Project4Image from './assets/project4.jpg';
 
 function Projects() {
   return (
-    <section id="projects" className="py-12 bg-gradient-to-b from-cyan-900 to-red-600">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-center text-white mb-8">Featured Projects</h2>
+    <section id="projects" className="min-h-screen bg-black text-white flex items-center justify-center relative overflow-hidden">
+      {/* Subtle animated background */}
+      <div className="absolute inset-0 bg-[url('./assets/noise.png')] opacity-10 animate-noise"></div>
+
+      {/* Glowing gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] opacity-50"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-[#64ffda] to-[#00a8cc] animate-fade-in-up">
+          Featured Projects
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProjectCard
-            title="Airbnb Clone App"
+            title="SoulMagle"
             description="A Booking App Using Node.js, Express, React.js, and Tailwind CSS."
             image={Project1Image}
             liveLink="#"
             githubLink="#"
           />
           <ProjectCard
-            title="Medium Clone App"
+            title="Tour& Travel Website"
             description="A Medium Clone App using Node.js, Express, React.js, and TypeScript."
             image={Project2Image}
             liveLink="#"
@@ -30,7 +38,7 @@ function Projects() {
             description="A portfolio website made using React and Tailwind CSS."
             image={Project3Image}
             liveLink="http://localhost:5173/projects"
-            githubLink="#"
+            githubLink="https://github.com/Purushottamkashyapcode/My-Portfolio/tree/main/Portfolio"
           />
         </div>
       </div>
@@ -40,19 +48,19 @@ function Projects() {
 
 function ProjectCard({ title, description, image, liveLink, githubLink }) {
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-md">
-      <img src={image} className="w-full h-64  object-center" alt={title} />
-      <div className="p-5 bg-gradient-to-t from-black to to-blue-400">
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-white mb-4">{description}</p>
+    <div className="bg-gradient-to-b from-[#112240] to-[#0a192f] rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-[#64ffda] animate-fade-in-up">
+      <img src={image} className="w-full h-64 object-cover" alt={title} />
+      <div className="p-6">
+        <h3 className="text-2xl font-semibold mb-4 text-[#64ffda]">{title}</h3>
+        <p className="text-gray-300 mb-6">{description}</p>
         <div className="flex justify-between">
-          <a href={liveLink} target="_blank" rel="noopener noreferrer" >
-            <button className="inline-block px-5 py-3 bg-gradient-to-b from-cyan-900 to-green-600 text-white font-bold rounded-full hover:bg-yellow-600 ml-3">
+          <a href={liveLink} target="_blank" rel="noopener noreferrer">
+            <button className="px-6 py-3 bg-gradient-to-r from-[#64ffda] to-[#00a8cc] text-black font-bold rounded-full hover:bg-gradient-to-r hover:from-[#00a8cc] hover:to-[#64ffda] transition-transform transform hover:scale-105">
               Live Preview
             </button>
           </a>
           <a href={githubLink} target="_blank" rel="noopener noreferrer">
-            <button className="inline-block px-9 py-3 bg-gradient-to-b from-blue-900 to-red-600 text-white font-bold rounded-full hover:bg-yellow-600 ml-3">
+            <button className="px-6 py-3 bg-gradient-to-r from-[#64ffda] to-[#00a8cc] text-black font-bold rounded-full hover:bg-gradient-to-r hover:from-[#00a8cc] hover:to-[#64ffda] transition-transform transform hover:scale-105">
               GitHub
             </button>
           </a>
